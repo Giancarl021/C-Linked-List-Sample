@@ -125,6 +125,8 @@ void edit_node(Node *head, int index, int id, char *name, int age) {
     char *copy_name = malloc(sizeof(char) * (strlen(name) + 1));
     strcpy(copy_name, name);
 
+    free(current->name);
+
     current->id = id;
     current->name = copy_name;
     current->age = age;
